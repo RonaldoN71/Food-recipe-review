@@ -38,8 +38,8 @@ exports.getRecipeReview = async(req,res)=>{
 exports.deleteReview = async(req,res)=>{
     const {reviewid} = req.params;
     try {
-        const DeleteReview = await reviewDB.findByIdAndDelete({_id:reviewid});
-        res.status(200).json({message:"review delet",DeleteReview})
+        const ReviewEntry = await reviewDB.findByIdAndDelete({_id:reviewid});
+        res.status(200).json({message:"review deleted",ReviewEntry})
     } catch (error) {
         console.log("error",error);
         res.status(500).json({error:error})

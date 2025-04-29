@@ -15,6 +15,4 @@ router.put("/resetpassword/:id/:token",userAuthController.resetPassword);
 // user verify api
 router.get("/userloggedin",userAuthenticate,userAuthController.userVerify);
 
-
-
 module.exports = router;

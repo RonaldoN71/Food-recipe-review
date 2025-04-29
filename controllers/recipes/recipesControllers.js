@@ -56,7 +56,7 @@ exports.deleteRecipeData = async(req,res)=>{
 
     try {
         const deleterecipe = await recipeDB.findByIdAndDelete({_id:recipeid});
-        res.status(200).json({message:"recipe sucefully deleted",deleterecipe});
+        res.status(200).json({message:"recipe successfully deleted",deleterecipe});
     } catch (error) {
         console.log("error",error);
         res.status(500).json({error:error})
